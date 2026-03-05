@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Character Viewer</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align: center;
+margin-top: 50px;
+}
+
+img{
+width: 250px;
+margin-top: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Select a Character</h2>
+
+<select id="characterSelect">
+
+<option value="garfield">Garfield</option>
+<option value="odie">Odie</option>
+<option value="nermal">Nermal</option>
+<option value="pooky">Pooky</option>
+<option value="jon">Jon</option>
+
+</select>
+
+<br><br>
+
+<img id="characterImage" src="images/garfield.jpg">
+
+<script>
+
+var selectBox = document.getElementById("characterSelect");
+var image = document.getElementById("characterImage");
+
+selectBox.addEventListener("change", function(){
+
+var selected = selectBox.value;
+
+image.src = "images/" + selected + ".jpg";
+
+});
+
+</script>
+
+</body>
+</html>
